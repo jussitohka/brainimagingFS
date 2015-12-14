@@ -36,7 +36,7 @@ function [beta,beta0,conv] = fastgraphnet2(X,Y,nu,lambda1,lambda2,nhood,nn,lscal
 % provided "as is" without express or implied warranty.
 % -------------------------------------------------------------  
 % Note that this version is thought to be research code and it may contain strange functionalities
-% At some point, a better document  
+% At some point, a better documentation and improved code with further supported function is coming along. 
 % Input parameters: 
 % X: ninput x nsamples input data (required)
 % Y: 1 x nsamples output data (class labels should be 0 and 1, non checking is done, required)
@@ -45,8 +45,8 @@ function [beta,beta0,conv] = fastgraphnet2(X,Y,nu,lambda1,lambda2,nhood,nn,lscal
 % lambda2: values for the Laplacian ridge penalty 
 % beta: initial beta
 % beta0: initial offset (it is assumed that there is offset)
-% nn : number of neighbours for each voxel
-% nhood: neighbours of each voxel
+% nn : number of neighbours for each voxel, returned for example by getNeighbourhood.m
+% nhood: neighbours of each voxel, returned, for example, by getNeighbourhood.m
 % lscaling: indicates how the lambda1 and lambda2 are scaled along the
 %           regularization path; [0 0] indicates that they are not scaled, 
 %           [1 0] indicates that lambda1 is scaled, etc.
